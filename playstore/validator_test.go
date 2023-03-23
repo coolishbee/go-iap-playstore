@@ -1,4 +1,4 @@
-package voided_purchases
+package playstore
 
 import (
 	"context"
