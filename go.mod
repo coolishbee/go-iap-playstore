@@ -1,4 +1,4 @@
-module github.com/coolishbee/go-playstore-voided-purchases
+module github.com/coolishbee/go-iap-playstore
 
 go 1.19
 
