@@ -1,4 +1,4 @@
-package playstore
+package voided_purchases
 
 import (
 	"context"
@@ -19,7 +19,7 @@ func TestVoidedList(t *testing.T) {
 	if err != nil {
 		t.Errorf("got %#v", err)
 	}
-	result, err := client.VoidedList(ctx, "packageName")
+	result, err := client.VoidedList(ctx, "com.gamepub.hab.g")
 	if err != nil {
 		t.Errorf("got %v", err)
 	}

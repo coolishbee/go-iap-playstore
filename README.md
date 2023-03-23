@@ -1,1 +1,1 @@
-# go-playstore-voided-purchases
+# go-iap-playstore
