@@ -48,3 +48,15 @@ func (c *Client) VoidedList(
 
 	return result, err
 }
+
+func (c *Client) VoidedListTimeRange(
+	ctx context.Context,
+	packageName string,
+	startTime int64,
+	endTime int64,
+) (*androidpublisher.VoidedPurchasesListResponse, error) {
+	ps := androidpublisher.NewPurchasesVoidedpurchasesService(c.service)
+	result, err := ps.List(packageName).StartTime(startTime).EndTime(endTime).Context(ctx).Do()
+
+	return result, err
+}
