@@ -71,9 +71,9 @@ import(
 )
 
 func main() {
-    ctx := context.Background()
-
-    jsonFile, err := os.ReadFile("service-account.json")
+	ctx := context.Background()
+	
+	jsonFile, err := os.ReadFile("service-account.json")
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -86,11 +86,11 @@ func main() {
 	endTime := time.Now().UTC()
 	startTime := endTime.Add(time.Hour * -4)	
 	result, err := client.VoidedListTimeRange(ctx, "packageName", startTime.UnixMilli(), endTime.UnixMilli())
-    if err != nil {
+	if err != nil {
 		fmt.Println(err)
 	}
-
-    if result != nil {
+	
+	if result != nil {
 		if result.TokenPagination != nil {
 			fmt.Println(result.TokenPagination.NextPageToken)
 		} else {
