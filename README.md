@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/golang-1.19-blue.svg?style=flat)
 
 go-iap-playstore searches the refund list via Playstore.
-This repository is inspired by [go-iap](https://github.com/awa/go-iap)
+This repository is inspired by [go-iap](https://github.com/awa/go-iap).
 
 # Installation
 ```
@@ -21,9 +21,9 @@ import(
 )
 
 func main() {
-    ctx := context.Background()
-
-    jsonFile, err := os.ReadFile("service-account.json")
+	ctx := context.Background()
+	
+	jsonFile, err := os.ReadFile("service-account.json")
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -38,7 +38,7 @@ func main() {
 		t.Errorf("got %v", err)
 	}
     
-    if result != nil {
+	if result != nil {		
 		if result.TokenPagination != nil {
 			fmt.Println(result.TokenPagination.NextPageToken)
 		} else {
